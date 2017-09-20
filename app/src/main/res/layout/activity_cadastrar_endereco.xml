@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.logonrm.qrcomprasapp.CadastrarEnderecoActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/edtCep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual o seu Cep?"
+            android:inputType="number"
+            android:maxLength="8"
+            />
+
+        <EditText
+            android:id="@+id/edtEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Estado"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtCidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Cidade"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtBairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Bairro"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtRua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Rua/Av"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Numero"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtComplemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Complemento"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            android:onClick="confirmar"
+            />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
