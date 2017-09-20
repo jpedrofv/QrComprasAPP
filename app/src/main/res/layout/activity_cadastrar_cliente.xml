@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_cadastrar_cliente"
     android:layout_width="match_parent"
@@ -10,15 +11,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.logonrm.qrcomprasapp.CadastrarClienteActivity">
 
-    <Button
-        android:text="Cadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="46dp"
-        android:id="@+id/btnCadastrar"
-        android:onClick="realizarCadastro"
-        />
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/edtCPF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é o seu CPF?"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é o seu nome?"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edtNascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é a data de seu nascimento?"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edtTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é o seu telefone?"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtCelular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é o numero do seu celular?"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Qual é o seu email?"
+            android:inputType="textEmailAddress" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            android:onClick="proximo"
+            />
+
+    </LinearLayout>
 </RelativeLayout>
