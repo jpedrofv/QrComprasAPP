@@ -60,5 +60,7 @@
         android:layout_alignTop="@+id/btnEntrar"
         android:layout_toEndOf="@+id/btnEntrar"
         android:layout_marginStart="29dp"
-        android:id="@+id/btnRegistrar" />
+        android:id="@+id/btnRegistrar"
+        android:onClick="registrar"
+        />
 </RelativeLayout>
