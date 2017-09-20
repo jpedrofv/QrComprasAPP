@@ -24,11 +24,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public Intent registrar(View v){
-        Intent i = new Intent();
-        i.setClass(this, CadastrarClienteActivity.class);
+    public void registrar(View v){
+        Intent i = new Intent(this, CadastrarClienteActivity.class);
         startActivity(i);
-
-        return i;
     }
 }
