@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".CadastrarClienteActivity" />
         <activity android:name=".CadastrarEnderecoActivity" />
-        <activity android:name=".ConfirmarCadastroActivity"></activity>
+        <activity android:name=".ConfirmarCadastroActivity" />
+        <activity android:name=".RegistrarSenhaActivity"></activity>
     </application>
 
 </manifest>

@@ -42,10 +42,10 @@ public class CadastrarClienteActivity extends AppCompatActivity {
 
 
 
-    public void realizarCadastro(View v){
+    /*public void realizarCadastro(View v){
         Cadastrar task = new Cadastrar();
         task.execute("44818952842", "João Pedro", "06328080", "true", "jpedro.fv@hotmail.com", "123456");
-    }
+    }*/
 
     public void proximo(View v){
 
@@ -73,62 +73,5 @@ public class CadastrarClienteActivity extends AppCompatActivity {
 
     }
 
-    private class Cadastrar extends AsyncTask<String, Void, Integer>{
 
-        private ProgressDialog progress;
-
-        @Override
-        protected void onPreExecute(){
-
-            progress = ProgressDialog.show(CadastrarClienteActivity.this, "Aguarde...", "Enviando Dados");
-        }
-
-        @Override
-        protected Integer doInBackground(String... params) {
-            URL url = null;
-            Integer i = null;
-            try{
-                url = new URL("http://10.0.2.2:8087/api/ws/rest/qrcompras/clientes");
-                HttpURLConnection con = (HttpURLConnection) url.openConnection();
-                con.setRequestMethod("POST");
-                con.setRequestProperty("Content-type", "application/json");
-
-                JSONStringer json = new JSONStringer();
-                json.object();
-                json.key("cpf").value(params[0]);
-                json.key("nome").value(params[1]);
-                json.key("cep").value(params[2]);
-                json.key("tipo").value(params[3]);
-                json.key("email").value(params[4]);
-                json.key("senha").value(params[5]);
-                json.endObject();
-
-                OutputStreamWriter stream = new OutputStreamWriter(con.getOutputStream());
-                stream.write(json.toString());
-                stream.close();
-
-
-                i = con.getResponseCode();
-
-            }catch(Exception e){
-                e.printStackTrace();
-            }
-
-            return i;
-        }
-
-
-
-        @Override
-        protected void onPostExecute(Integer s){
-            progress.dismiss();
-            if(s == 201){
-                Toast.makeText(CadastrarClienteActivity.this, "Cadastrado com Sucesso!!!", Toast.LENGTH_LONG).show();
-            }else{
-                Toast.makeText(CadastrarClienteActivity.this, "Erro ao realizar o cadastro!!!", Toast.LENGTH_LONG).show();
-            }
-        }
-
-
-    }
 }
