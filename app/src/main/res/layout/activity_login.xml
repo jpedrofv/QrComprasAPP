@@ -8,59 +8,66 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@mipmap/background"
     tools:context="com.example.logonrm.qrcomprasapp.LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
         android:id="@+id/edtEmail"
-        android:hint="Digite Seu Email"
-        android:layout_marginTop="11dp"
-        android:layout_below="@+id/textView" />
-
-    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:layout_marginTop="160dp"
         android:ems="10"
-        android:layout_below="@+id/edtEmail"
-        android:layout_marginTop="11dp"
+        android:hint="Digite Seu Email"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/white"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
         android:id="@+id/edtSenha"
-        android:hint="Digite Sua Senha" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="Digite Sua Senha"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"
+        android:layout_below="@+id/edtEmail"
+        android:layout_alignStart="@+id/edtEmail" />
 
     <CheckBox
+        android:id="@+id/ckbLembrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:text="Manter-se Conectado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
         android:layout_below="@+id/edtSenha"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="26dp"
-        android:id="@+id/ckbLembrar" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:text="Entrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
         android:id="@+id/btnEntrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        android:background="@android:color/transparent"
+        android:text="Entrar"
         android:layout_below="@+id/ckbLembrar"
-        android:layout_alignStart="@+id/ckbLembrar" />
+        android:layout_alignEnd="@+id/btnRegistrar" />
 
     <Button
-        android:text="Registrar-se"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnEntrar"
-        android:layout_toEndOf="@+id/btnEntrar"
-        android:layout_marginStart="29dp"
         android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@android:color/transparent"
         android:onClick="registrar"
-        />
+        android:text="Registrar-se"
+        android:layout_below="@+id/btnEntrar"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginStart="15dp" />
+
 </RelativeLayout>

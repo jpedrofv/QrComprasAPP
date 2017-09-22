@@ -16,7 +16,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
 
         <EditText
             android:id="@+id/edtCPF"
@@ -24,7 +25,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é o seu CPF?"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColorHint="@android:color/white" />
 
         <EditText
             android:id="@+id/edtNome"
@@ -32,7 +34,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é o seu nome?"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="@android:color/white"
+            />
 
         <EditText
             android:id="@+id/edtNascimento"
@@ -40,7 +44,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é a data de seu nascimento?"
-            android:inputType="date" />
+            android:inputType="date"
+            android:textColorHint="@android:color/white"/>
 
         <EditText
             android:id="@+id/edtTelefone"
@@ -48,7 +53,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é o seu telefone?"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:textColorHint="@android:color/white"/>
 
         <EditText
             android:id="@+id/edtCelular"
@@ -56,7 +62,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é o numero do seu celular?"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:textColorHint="@android:color/white"/>
 
         <EditText
             android:id="@+id/edtEmail"
@@ -64,15 +71,17 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Qual é o seu email?"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColorHint="@android:color/white"/>
 
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/ic_menu_send"
+            android:background="@android:color/transparent"
             android:onClick="proximo"
-            />
+            android:layout_weight="0.81" />
 
     </LinearLayout>
 </RelativeLayout>
