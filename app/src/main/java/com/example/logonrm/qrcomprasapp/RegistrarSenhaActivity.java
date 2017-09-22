@@ -39,19 +39,19 @@ public class RegistrarSenhaActivity extends AppCompatActivity {
 
 
             Cadastrar cad = new Cadastrar();
-            cad.execute(b.get("cpf").toString(),
-                    b.get("nome").toString(),
-                    b.get("nascimento").toString(),
-                    b.get("telefone").toString(),
-                    b.get("celular").toString(),
-                    b.get("cep").toString(),
-                    b.get("logradouro").toString(),
-                    b.get("numero").toString(),
-                    b.get("bairro").toString(),
-                    b.get("cidade").toString(),
+            cad.execute(b.getString("cpf"),
+                    b.getString("nome"),
+                    b.getString("nascimento"),
+                    b.getString("telefone"),
+                    b.getString("celular"),
+                    b.getString("cep"),
+                    b.getString("logradouro"),
+                    b.getString("numero"),
+                    b.getString("bairro"),
+                    b.getString("cidade"),
                     "false",
-                    b.get("email").toString(),
-                    b.get("senha").toString());
+                    b.getString("email"),
+                    b.getString("senha"));
 
 
 
