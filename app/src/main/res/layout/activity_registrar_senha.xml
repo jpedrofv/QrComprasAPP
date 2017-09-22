@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.logonrm.qrcomprasapp.ConfirmarCadastroActivity">
+    tools:context="com.example.logonrm.qrcomprasapp.RegistrarSenhaActivity">
 
     <LinearLayout
         android:layout_width="368dp"
@@ -13,30 +13,28 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <TextView
-            android:id="@+id/textView2"
+        <EditText
+            android:id="@+id/edtSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="VERIFIQUE SE OS DADOS ESTÃO CORRETOS" />
+            android:ems="10"
+            android:hint="Digite uma Senha de Acesso"
+            android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/txtResp"
+        <EditText
+            android:id="@+id/edtConfirmSenha"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Confirme a Senha"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnConfirmar"
+            android:id="@+id/btnConcluir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:onClick="proximo"
-
+            android:text="Concluir Cadastro"
+            android:onClick="realizarCadastro"
             />
-
-        <Button
-            android:id="@+id/btnCancelar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cancelar" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

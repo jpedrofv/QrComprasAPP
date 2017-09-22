@@ -28,4 +28,9 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = new Intent(this, CadastrarClienteActivity.class);
         startActivity(i);
     }
+
+    public void entrar(View v){
+        Intent i = new Intent(this, MenuActivity.class);
+        startActivity(i);
+    }
 }
