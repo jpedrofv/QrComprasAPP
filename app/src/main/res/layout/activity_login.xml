@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/backgroundapp"
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +12,10 @@
     android:background="@mipmap/background"
     tools:context="com.example.logonrm.qrcomprasapp.LoginActivity">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a2ac59db96f8298928d4355c64c038e59b1ee3c4
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="wrap_content"
@@ -18,10 +23,15 @@
         android:layout_marginTop="160dp"
         android:ems="10"
         android:hint="Digite Seu Email"
+<<<<<<< HEAD
         android:inputType="textPersonName"
         android:textColorHint="@android:color/white"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
+=======
+        android:layout_marginTop="11dp"
+         />
+>>>>>>> a2ac59db96f8298928d4355c64c038e59b1ee3c4
 
     <EditText
         android:id="@+id/edtSenha"
@@ -43,9 +53,22 @@
         android:text="Manter-se Conectado"
         android:textColor="@android:color/white"
         android:layout_below="@+id/edtSenha"
+<<<<<<< HEAD
         android:layout_centerHorizontal="true" />
 
     <Button
+=======
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="26dp"
+        android:id="@+id/ckbLembrar" />
+
+    <Button
+        android:text="Entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/transparent"
+>>>>>>> a2ac59db96f8298928d4355c64c038e59b1ee3c4
         android:id="@+id/btnEntrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,9 +78,24 @@
         android:background="@android:color/transparent"
         android:text="Entrar"
         android:layout_below="@+id/ckbLembrar"
+<<<<<<< HEAD
         android:layout_alignEnd="@+id/btnRegistrar" />
 
     <Button
+=======
+        android:layout_alignStart="@+id/ckbLembrar"
+        android:onClick="entrar"
+        />
+
+    <Button
+        android:text="Registrar-se"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnEntrar"
+        android:layout_toEndOf="@+id/btnEntrar"
+        android:layout_marginStart="29dp"
+        android:background="@android:color/transparent"
+>>>>>>> a2ac59db96f8298928d4355c64c038e59b1ee3c4
         android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

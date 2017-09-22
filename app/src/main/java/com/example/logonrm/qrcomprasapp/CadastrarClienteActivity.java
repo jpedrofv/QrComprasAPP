@@ -52,6 +52,8 @@ public class CadastrarClienteActivity extends AppCompatActivity {
         String cpf = edtCPF.getText().toString();
         String nome = edtNome.getText().toString();
         String nascimento = edtNascimento.getText().toString();
+
+
         String telefone = edtTelefone.getText().toString();
         String celular = edtCelular.getText().toString();
         String email = edtEmail.getText().toString();
