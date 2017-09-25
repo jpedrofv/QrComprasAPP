@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,6 +39,7 @@ public class CadastrarClienteActivity extends AppCompatActivity {
         edtTelefone = (EditText) findViewById(R.id.edtTelefone);
         edtCelular = (EditText) findViewById(R.id.edtCelular);
         edtEmail = (EditText) findViewById(R.id.edtEmail);
+
     }
 
 

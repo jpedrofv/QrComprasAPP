@@ -43,9 +43,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Qual é a data de seu nascimento?"
+            android:hint="Qual é a sua data de nascimento?"
             android:inputType="date"
-            android:textColorHint="@android:color/white"/>
+            android:textColorHint="@android:color/white" />
 
         <EditText
             android:id="@+id/edtTelefone"

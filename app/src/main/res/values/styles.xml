@@ -12,7 +12,7 @@
         <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 
-    <style name="QrCompras" parent="AppTheme" >
+    <style name="QrCompras" parent="AppTheme">
         <item name="android:statusBarColor">@color/colorAccent</item>
         <item name="colorAccent">@android:color/background_light</item>
         <item name="android:colorForeground">@android:color/white</item>
@@ -27,5 +27,14 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="QrCompras.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="QrCompras.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="QrCompras.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

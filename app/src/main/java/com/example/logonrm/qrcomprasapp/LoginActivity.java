@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void entrar(View v){
-        Intent i = new Intent(this, MenuActivity.class);
-        startActivity(i);
+        /*Intent i = new Intent(this, MenuActivity.class);
+        startActivity(i);*/
     }
 }
