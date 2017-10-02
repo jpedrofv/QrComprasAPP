@@ -1,22 +1,13 @@
-package com.example.logonrm.qrcomprasapp;
+package br.com.qrcompras.activitys;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import org.json.JSONStringer;
-
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
+import com.example.logonrm.activitys.CadastrarEnderecoActivity;
+import com.example.logonrm.activitys.R;
 
 public class CadastrarClienteActivity extends AppCompatActivity {
 

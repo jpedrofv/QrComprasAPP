@@ -1,4 +1,4 @@
-package com.example.logonrm.qrcomprasapp;
+package com.example.logonrm.activitys;
 
 import org.junit.Test;
 

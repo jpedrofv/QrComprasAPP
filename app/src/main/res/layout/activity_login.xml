@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@mipmap/background"
-    tools:context="com.example.logonrm.qrcomprasapp.LoginActivity">
+    tools:context="com.example.logonrm.activitys.LoginActivity">
 
     <EditText
         android:id="@+id/edtEmail"
