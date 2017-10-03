@@ -125,43 +125,52 @@ public class MenuActivity extends AppCompatActivity
 
     }
 
-    private void addCarrinho(String ean){
+    private void addCarrinho(String ean, String idParceiro){
         // Acionado para adicionar o produto ao carrinho
 
         Produto produto = new Produto();
         BuscaProduto busca = new BuscaProduto();
 
-        produto = busca.buscarProdutosQr(ean);
+        produto = busca.buscarProdutosQr(ean, idParceiro);
 
-        //Adiciona Linha
-        TableRow tr = new TableRow(this);
-        tr.setId(i);
-        TableRow.LayoutParams trp = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
-                                                                TableRow.LayoutParams.MATCH_PARENT);
-        tr.setLayoutParams(trp);
-        tl.addView(tr);
+        if(produto != null){
+            carrinho.add(produto);
 
-        //Adiciona Imagem na linha
-        ImageView img = new ImageView(this);
-        //img.setImageDrawable();
-        tr.addView(img);
+            //Adiciona Linha
+            TableRow tr = new TableRow(this);
+            tr.setId(i);
+            TableRow.LayoutParams trp = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.MATCH_PARENT);
+            tr.setLayoutParams(trp);
+            tl.addView(tr);
 
-        TextView prod = new TextView(this);
-        prod.setText(produto.getDescricao());
-        tr.addView(prod);
+            //Adiciona Imagem na linha
+            ImageView img = new ImageView(this);
+            //img.setImageDrawable();
+            tr.addView(img);
 
-        TextView preco = new TextView(this);
-        prod.setText(String.valueOf(produto.getValor()));
-        tr.addView(preco);
+            TextView prod = new TextView(this);
+            prod.setText(produto.getDescricao());
+            tr.addView(prod);
 
-        EditText qtd = new EditText(this);
-        qtd.setText("1");
-        tr.addView(qtd);
+            TextView preco = new TextView(this);
+            prod.setText(String.valueOf(produto.getValor()));
+            tr.addView(preco);
 
-        Button remover = new Button(this);
-        remover.setText("Remover");
-        tr.addView(remover);
+            EditText qtd = new EditText(this);
+            qtd.setText("1");
+            tr.addView(qtd);
 
-       Toast.makeText(this, "Produto Adicionado", Toast.LENGTH_SHORT).show();
+            Button remover = new Button(this);
+            remover.setText("Remover");
+            tr.addView(remover);
+
+            Toast.makeText(this, "Produto Adicionado", Toast.LENGTH_SHORT).show();
+
+        }else{
+            Toast.makeText(this, "Produto Não Encontrado!!", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 }
