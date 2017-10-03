@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.logonrm.qrcomprasapp">
+    package="com.example.logonrm.activitys">
 
+    <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logotipo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        android:theme="@style/QrCompras">
+        <activity android:name=".activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastrarClienteActivity" />
-        <activity android:name=".CadastrarEnderecoActivity" />
-        <activity android:name=".ConfirmarCadastroActivity" />
-        <activity android:name=".RegistrarSenhaActivity" />
+        <activity android:name=".activitys.CadastrarClienteActivity" />
+        <activity android:name=".activitys.CadastrarEnderecoActivity" />
+        <activity android:name=".activitys.ConfirmarCadastroActivity" />
+        <activity android:name=".activitys.RegistrarSenhaActivity" />
         <activity
-            android:name=".MenuActivity"
+            android:name=".activitys.MenuActivity"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/QrCompras.NoActionBar"></activity>
     </application>
 
 </manifest>
