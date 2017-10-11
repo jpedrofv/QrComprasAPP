@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import com.example.logonrm.activitys.CadastrarEnderecoActivity;
+import br.com.qrcompras.activitys.CadastrarEnderecoActivity;
 import com.example.logonrm.activitys.R;
 
 public class CadastrarClienteActivity extends AppCompatActivity {

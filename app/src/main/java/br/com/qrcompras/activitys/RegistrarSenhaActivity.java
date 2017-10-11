@@ -74,7 +74,7 @@ public class RegistrarSenhaActivity extends AppCompatActivity {
             URL url = null;
             Integer i = null;
             try{
-                url = new URL("http://10.0.2.2:8087/api/ws/rest/qrcompras/clientes");
+                url = new URL("http://qrcompras.ddns.net:8087/api/ws/rest/qrcompras/clientes");
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("POST");
                 con.setRequestProperty("Content-type", "application/json");

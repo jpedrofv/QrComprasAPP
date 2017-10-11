@@ -12,19 +12,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/QrCompras">
-        <activity android:name=".activitys.LoginActivity">
+        <activity android:name="br.com.qrcompras.activitys.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activitys.CadastrarClienteActivity" />
-        <activity android:name=".activitys.CadastrarEnderecoActivity" />
-        <activity android:name=".activitys.ConfirmarCadastroActivity" />
-        <activity android:name=".activitys.RegistrarSenhaActivity" />
+        <activity android:name="br.com.qrcompras.activitys.CadastrarClienteActivity" />
+        <activity android:name="br.com.qrcompras.activitys.CadastrarEnderecoActivity" />
+        <activity android:name="br.com.qrcompras.activitys.ConfirmarCadastroActivity" />
+        <activity android:name="br.com.qrcompras.activitys.RegistrarSenhaActivity" />
         <activity
-            android:name=".activitys.MenuActivity"
+            android:name="br.com.qrcompras.activitys.MenuActivity"
             android:label="@string/title_activity_menu"
             android:theme="@style/QrCompras.NoActionBar"></activity>
     </application>
