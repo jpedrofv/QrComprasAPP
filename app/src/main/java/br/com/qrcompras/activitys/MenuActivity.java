@@ -20,7 +20,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.logonrm.activitys.R;
+import br.com.qrcompras.activitys.R;
 
 import java.util.ArrayList;
 import java.util.List;

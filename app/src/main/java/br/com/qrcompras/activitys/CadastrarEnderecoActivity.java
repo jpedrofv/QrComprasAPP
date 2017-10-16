@@ -10,9 +10,8 @@ import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.logonrm.activitys.ConfirmarCadastroActivity;
-import com.example.logonrm.activitys.R;
+import br.com.qrcompras.activitys.ConfirmarCadastroActivity;
+import br.com.qrcompras.activitys.R;
 
 import org.json.JSONObject;
 

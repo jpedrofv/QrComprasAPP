@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.logonrm.activitys.R;
+import br.com.qrcompras.activitys.R;
 
 public class ConfirmarCadastroActivity extends AppCompatActivity {
 

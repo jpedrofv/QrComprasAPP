@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.logonrm.activitys.R;
+import br.com.qrcompras.activitys.R;
 
 import org.json.JSONStringer;
 
