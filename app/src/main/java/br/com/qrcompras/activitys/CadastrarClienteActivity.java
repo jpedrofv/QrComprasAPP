@@ -9,6 +9,7 @@ import android.widget.EditText;
 import br.com.qrcompras.activitys.CadastrarEnderecoActivity;
 import br.com.qrcompras.activitys.R;
 
+
 public class CadastrarClienteActivity extends AppCompatActivity {
 
 

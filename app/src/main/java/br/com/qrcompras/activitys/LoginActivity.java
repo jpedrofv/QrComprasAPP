@@ -67,7 +67,10 @@ public class LoginActivity extends AppCompatActivity {
         protected Integer doInBackground(String... params) {
 
             String urlParameters = "email="+params[0]+"&senha="+params[1];
-            byte[] postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
+            byte[] postData = new byte[0];
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.GINGERBREAD) {
+                postData = urlParameters.getBytes( StandardCharsets.UTF_8 );
+            }
             int postDataLength = postData.length;
 
             try {
