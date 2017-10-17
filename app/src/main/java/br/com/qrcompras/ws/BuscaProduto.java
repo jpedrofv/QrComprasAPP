@@ -25,10 +25,10 @@ public class BuscaProduto {
 
     Produto prod = new Produto();
 
-    public Produto buscarProdutosQr(String ean, String idParceiro){
+    public Produto buscarProdutosQr(String codigo){
 
         BuscarProduto task = new BuscarProduto();
-        task.execute(ean, idParceiro);
+        task.execute(codigo);
 
         return prod;
 
@@ -52,7 +52,7 @@ public class BuscaProduto {
             Integer i = null;
             StringBuilder resp = new StringBuilder();
             try{
-                url = new URL("http://qrcompras.ddns.net:8087/api/ws/rest/qrcompras/produtos/"+params[0]+"/"+params[1]);
+                url = new URL("http://10.0.2.2:8087/api/ws/rest/qrcompras/produtos/"+params[0]);
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
                 con.setRequestMethod("GET");
                 con.setRequestProperty("Accept", "application/json");

@@ -3,12 +3,27 @@ package br.com.qrcompras.fragments;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.telephony.PhoneNumberFormattingTextWatcher;
+import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.logonrm.activitys.R;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.qrcompras.models.Produto;
+import br.com.qrcompras.ws.BuscaProduto;
 
 
 /**
@@ -29,7 +44,10 @@ public class CarrinhoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    GridView carrinho;
+    int i = 0;
+    TableLayout tl;
+    List<Produto> carrinho = new ArrayList<Produto>();
+    EditText codigo;
 
 
     private OnFragmentInteractionListener mListener;
@@ -61,8 +79,29 @@ public class CarrinhoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        tl = (TableLayout) getActivity().findViewById(R.id.carrinhoTable);
+    codigo = (EditText) getActivity().findViewById(R.id.edtCodigo);
+        codigo.addTextChangedListener(new PhoneNumberFormattingTextWatcher() {
 
+            @Override
+            public void afterTextChanged(Editable s) {
 
+                if(s.length() == 5){
+                    add();
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start,
+                                          int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start,
+                                      int before, int count) {
+
+            }
+        });
     }
 
     @Override
@@ -94,8 +133,48 @@ public class CarrinhoFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    public void add(View v){
+    public void add(){
+        BuscaProduto ws = new BuscaProduto();
+        Produto prod = new Produto();
+        prod = ws.buscarProdutosQr(codigo.getText().toString());
 
+        if(prod != null){
+            carrinho.add(prod);
+
+            //Adiciona Linha
+            TableRow tr = new TableRow(getActivity());
+            tr.setId(i);
+            TableRow.LayoutParams trp = new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                    TableRow.LayoutParams.MATCH_PARENT);
+            tr.setLayoutParams(trp);
+            tl.addView(tr);
+
+            //Adiciona Imagem na linha
+            ImageView img = new ImageView(getActivity());
+            //img.setImageDrawable();
+            tr.addView(img);
+
+            TextView produto = new TextView(getActivity());
+            produto.setText(prod.getDescricao());
+            tr.addView(produto);
+
+            TextView preco = new TextView(getActivity());
+            preco.setText(String.valueOf(prod.getValor()));
+            tr.addView(preco);
+
+            EditText qtd = new EditText(getActivity());
+            qtd.setText("1");
+            tr.addView(qtd);
+
+            Button remover = new Button(getActivity());
+            remover.setText("Remover");
+            tr.addView(remover);
+
+            Toast.makeText(getActivity(), "Produto Adicionado", Toast.LENGTH_SHORT).show();
+
+        }else{
+            Toast.makeText(getActivity(), "Produto Não Encontrado!!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

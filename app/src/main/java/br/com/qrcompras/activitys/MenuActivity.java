@@ -125,13 +125,13 @@ public class MenuActivity extends AppCompatActivity
 
     }
 
-    private void addCarrinho(String ean, String idParceiro){
+    private void addCarrinho(String codigo){
         // Acionado para adicionar o produto ao carrinho
 
         Produto produto = new Produto();
         BuscaProduto busca = new BuscaProduto();
 
-        produto = busca.buscarProdutosQr(ean, idParceiro);
+        produto = busca.buscarProdutosQr(codigo);
 
         if(produto != null){
             carrinho.add(produto);
